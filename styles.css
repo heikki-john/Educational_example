@@ -1,0 +1,12 @@
+/* Element selector */
+div{
+    background-color: deeppink;
+    margin: 10px;
+}
+
+/* Class selector */
+.fancy{
+    background-color: aqua;
+    color: beige;
+    margin: 10px;  
+}

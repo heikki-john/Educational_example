@@ -1,0 +1,25 @@
+************ GIT ************
+Valmiin repon hakeminen
+git clone github_url
+
+git status -komennolla gitin sen hetkinen tila
+Ignorattavat tiedostot ja hakemistot
+.gitignore juurihakemistoon sinne tiedostot ja hakemistot jotka halutaan jättää pois.
+   - test.html       -> test.html ei päivitetä gitiin
+   - /temp/          -> /temp hakemistoa sisältöineen ei päivitetä gitiin
+
+Uuden repon luominen
+1. luo uusi remote repo
+2. luo local repo (clone)
+3. Tiedostojen/hakemistojen lisääminen, poisto tai muokkaus
+4. Lisää tai poista tiedosto reposta komennolla git add
+   - git add . (kerralla kaikki)
+   - git add file_nimi
+5. Varmista toimet git commit -käskyllä 
+  - git commit -m "commitin info teksti"
+6. git push -komennolla tavara remote repoon
+
+************  ************  ************  ************
+
+
+
