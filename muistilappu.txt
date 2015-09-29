@@ -1,3 +1,10 @@
+Hemmaworks
+----------
+-Harjoittele MongoDB operaatiot (CRUD)
+-Miten päivitetään uusi field eli "attribuutti" dokumenttiin. Pitää näkyä myös olemassa olevissa
+-Miten poistetaan field
+-Tutustu JQueryn Ajax operaatioihin
+
 ************ GIT ************
 Valmiin repon hakeminen
 git clone github_url
@@ -21,5 +28,55 @@ Uuden repon luominen
 
 ************  ************  ************  ************
 
+************ MONGODB *************
 
+>show dbs (show databases)
+>use tietokantanimi (ottaa käyttöön olemassa olevan tietokannan)
+>show collections (näyttää tietokannan collektionin. 
+>use tietokannan (uuden tietokannan luominen)
+>db (kertoo missä kannassa ollaan kiinni)
+>db."collektionin_nimi".insert({attribuutti:arvo});  (collection luonti ja documentin lisäämien siihen) (esim  db.friends.insert({name:"Joni",address:"Menninkainen 8", age:35});  )
+>db."collektionin_nimi".find();  (dokumentin etsiminen collectionista. Etsii kaikki)
+>db."collektionin_nimi".find().pretty(); (Sama haku kauniimmin)
+>db.friends.find({name:"Luka"}).pretty(); (Henkilön Luka haku nimen perusteella friends collectionista)
+>db.friends.find({age:5}).pretty(); (Henkilön haku iän 5 vuotta perusteella friends collectionista)
+>db.friends.remove({age:22}); (poisto collectionista iän 22 perusteella)
+> 
+>
+>
+>
+>
+>
+
+(https://docs.mongodb.org/manual/reference/sql-comparison/)
+dokumentti on sama kuin rivi sqlssä? :)
+
+/* tietokantataulu sisältäen tietueet name, address, age */
+var data = {
+  name:String,
+  address:String,
+  age:Number,
+  date:Date,
+  workplace:[{
+    work_address:String,
+    foreman:String,
+    start_date:Date,
+  }],
+  callback:hello
+}
+
+function hello(){
+
+}
+data.name; (palauttaa name fieldin sisällön)
+data.workplace[0].work_address; (palauttaa work_addressin)
+
+for(i = 0; i <= data.workplace.length; i++){
+  data.workplace[i].work_address;
+}
+
+data.callback();
+
+(http://mongoosejs.com/docs/schematypes.html) datatyypit
+**********************************
 

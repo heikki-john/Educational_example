@@ -10,3 +10,15 @@ div{
     color: beige;
     margin: 10px;  
 }
+/* class määreen voi periyttää Idtä ei */
+.pancy{
+    margin: 45px;
+    
+}
+
+/*Id selector*/
+#test{
+    max-width: 300px;
+  /*  margin: 10 10 10 10; /* ylös oikealle alas vasemmalle */
+    margin: 10 auto; /* keskitys? */
+}
