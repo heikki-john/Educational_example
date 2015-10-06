@@ -2,7 +2,10 @@ Hemmaworks
 ----------
 -Harjoittele MongoDB operaatiot (CRUD)
 -Miten päivitetään uusi field eli "attribuutti" dokumenttiin. Pitää näkyä myös olemassa olevissa
+db.pojat.update({},{$set:{"osoite":1}},false,true);
 -Miten poistetaan field
+Helkkarin vaikeasti
+ db.pojat.update({}, {$unset: {ika: "" } },false,true);
 -Tutustu JQueryn Ajax operaatioihin
 
 ************ GIT ************
@@ -41,8 +44,8 @@ Uuden repon luominen
 >db.friends.find({name:"Luka"}).pretty(); (Henkilön Luka haku nimen perusteella friends collectionista)
 >db.friends.find({age:5}).pretty(); (Henkilön haku iän 5 vuotta perusteella friends collectionista)
 >db.friends.remove({age:22}); (poisto collectionista iän 22 perusteella)
-> 
->
+>db.pojat.update({},{$set:{"osoite":1}},false,true); (Lisätään uusi field) 
+> db.pojat.update({}, {$unset: {ika: "" } },false,true); (Fieldin poisto)
 >
 >
 >
