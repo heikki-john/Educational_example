@@ -1,7 +1,13 @@
+/* TEE aina Jquery ready applikaatioon "$(document).ready(function (event){...});"*/
 /* Ready function is called when DOM is ready */
 /* otetaan eventti kiinni, ei ole pakko :)*/
 $(document).ready(function (event) {
   console.log("We are ready");
+    //1. We need to make an ajax (http) request to our mongo database with JQuery
+    //2. We need  to generate UI dynamically from response data jquery
+    
+    //to use HTTP api start mongodb with next 
+    //mongo.exe -- rest --jsonp
 });
 
 /* toinen tapa

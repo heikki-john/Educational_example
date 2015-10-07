@@ -81,5 +81,25 @@ for(i = 0; i <= data.workplace.length; i++){
 data.callback();
 
 (http://mongoosejs.com/docs/schematypes.html) datatyypit
+
+**********************************
+Mongodb PAT (.bat)
+"C:\Program Files\MongoDB\Server\3.0\bin\mongod.exe" --rest --jsonp
+"C:\Program Files\MongoDB\Server\3.0\bin\mongo.exe"
+
 **********************************
 
+Fiddler - työkalu verkkoliikenteen tutkimiseen
+
+**********************************
+HTTP metodit (rest toteutetaan näillä)
+--------------------------------------
+GET - Haetaan resurssi palvelimelta
+POST - Viedään uusi resurssi palvelimelle
+PUT - Päivitetään serverillä olevia tietoja
+DELETE - Poistetaan tietoja palvelimelta (ehkä näkymästäkin)
+
+muita
+options - hakee tietoja palvelimelta
+header - hakee header tieton palvelimelta
+**********************************
