@@ -8,7 +8,55 @@ $(document).ready(function (event) {
     
     //to use HTTP api start mongodb with next 
     //mongo.exe -- rest --jsonp
+    
+    //ajax on funktio $ on sama kuin jquery
+    $.ajax({
+        method: "GET",
+        url: "http://localhost:28017/person/friends/",
+        dataType: "jsonp",
+        jsonp: "jsonp",
+        //success functio jos kysely onnistuu tjs. funktiolle pari parametriä voisi olla kolmekin, ei ole pakko.
+        success: function(data,status){
+            console.log(data);
+            console.log(status);
+            
+            for(i = 0; i < data.rows.length; i++)
+            {
+                var my_color;
+                
+
+                if(data.rows[i].age >= 50){
+                    my_color = "old";
+                }
+                else if (data.rows[i].age < 50 && data.rows[i].age >= 20){
+                    my_color = "middle_age";
+                }
+                else
+                {
+                    my_color = "young";
+                }
+                
+                    $(  "<tr> <td>" + data.rows[i].name + "</td>" +
+                        "<td>" + data.rows[i].address + "</td>" +
+                        "<td>" + data.rows[i].age + "</td> </tr>").appendTo( "#parent_table" ).addClass(my_color); 
+            }
+        },
+        //kysely epäonnistuu
+        error: function(hrx, status, errorThrown){
+            console.log(errorThrown);
+        },
+/*toinen tapa success
+        success: responceReady,
+*/
+    });
+    
 });
+/* toinen tapa success
+function responceReady(data, status){
+    console.log(data);
+    console.log(status);
+}
+*/
 
 /* toinen tapa
 

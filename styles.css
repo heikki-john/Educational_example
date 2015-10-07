@@ -22,3 +22,17 @@ div{
   /*  margin: 10 10 10 10; /* ylös oikealle alas vasemmalle */
     margin: 10 auto; /* keskitys? */
 }
+
+table, th, tr{
+  border: 2px solid;
+}
+
+.young{
+    background-color: green;
+}
+.middle_age{
+    background-color: red;
+}
+.old{
+    background-color: gray;
+}

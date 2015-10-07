@@ -35,7 +35,7 @@ Uuden repon luominen
 
 >show dbs (show databases)
 >use tietokantanimi (ottaa käyttöön olemassa olevan tietokannan)
->show collections (näyttää tietokannan collektionin. 
+>show collections (näyttää tietokannan collektionin) 
 >use tietokannan (uuden tietokannan luominen)
 >db (kertoo missä kannassa ollaan kiinni)
 >db."collektionin_nimi".insert({attribuutti:arvo});  (collection luonti ja documentin lisäämien siihen) (esim  db.friends.insert({name:"Joni",address:"Menninkainen 8", age:35});  )
