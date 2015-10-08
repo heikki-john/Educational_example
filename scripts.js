@@ -19,6 +19,16 @@ $(document).ready(function (event) {
         success: function(data,status){
             console.log(data);
             console.log(status);
+            console.log(Object.keys(data.rows[0]));
+            
+            var headers = Object.keys(data.rows[0]);
+
+            var headerRow = $("<tr></tr>");
+            $(headerRow).appendTo("#parent_table");
+            for(i=1; i < headers.length; i++){
+
+                $(headerRow).append("<th>" + headers[i] + "</th>");
+            }
             
             for(i = 0; i < data.rows.length; i++)
             {
